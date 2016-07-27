@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Pizza_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="87w-1f-6iY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="87w-1f-6iY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XmH-Ak-7yn"/>
+                            <constraint firstItem="87w-1f-6iY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c6f-lK-dW4"/>
+                            <constraint firstAttribute="trailing" secondItem="87w-1f-6iY" secondAttribute="trailing" id="jXT-Tv-YZd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="87w-1f-6iY" secondAttribute="bottom" id="n4O-lF-GJf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationView" destination="Lz4-MC-Xko" id="udr-81-Wty"/>
+                        <outlet property="mapView" destination="87w-1f-6iY" id="q9q-oe-BiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Lz4-MC-Xko" customClass="LocationView" customModule="Pizza_App" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-oq-dNv">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="iRS-Zd-rLU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikT-X2-gOH">
+                            <rect key="frame" x="0.0" y="19" width="240" height="109"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="PtB-oq-dNv" firstAttribute="top" secondItem="Lz4-MC-Xko" secondAttribute="top" id="8zH-4v-xN3"/>
+                        <constraint firstItem="PtB-oq-dNv" firstAttribute="leading" secondItem="Lz4-MC-Xko" secondAttribute="leading" id="Ert-4M-Tul"/>
+                        <constraint firstItem="ikT-X2-gOH" firstAttribute="top" secondItem="Lz4-MC-Xko" secondAttribute="top" constant="19" id="HR1-jI-Mem"/>
+                        <constraint firstItem="ikT-X2-gOH" firstAttribute="leading" secondItem="Lz4-MC-Xko" secondAttribute="leading" id="ijp-sl-2gg"/>
+                        <constraint firstAttribute="trailing" secondItem="PtB-oq-dNv" secondAttribute="trailing" id="owl-8f-b6E"/>
+                        <constraint firstAttribute="bottom" secondItem="ikT-X2-gOH" secondAttribute="bottom" id="t7q-gy-DCc"/>
+                        <constraint firstAttribute="trailing" secondItem="ikT-X2-gOH" secondAttribute="trailing" id="vv3-Hd-2Wm"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="pinImage" destination="ikT-X2-gOH" id="OKV-Qm-xOy"/>
+                        <outlet property="pinLabel" destination="PtB-oq-dNv" id="Wbv-TW-rrI"/>
+                    </connections>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="380" y="305"/>
+        </scene>
+    </scenes>
+</document>
